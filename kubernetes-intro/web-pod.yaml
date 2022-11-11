@@ -8,6 +8,8 @@ spec:
  containers:
   - name: nginx
     image: garamer/k8s:nginx_v1
+    livenessProbe:
+     tcpSocket: { port: 8000 }
     volumeMounts:
     - name: app
       mountPath: /app
