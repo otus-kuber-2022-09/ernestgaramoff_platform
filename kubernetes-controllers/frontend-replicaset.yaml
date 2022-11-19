@@ -16,7 +16,7 @@ spec:
     spec:
      containers:
      - name: frontend
-       image: garamer/frontend:v0.0.2
+       image: garamer/frontend:v.0.0.2
        env:
        - name: PORT
          value: "8080"
