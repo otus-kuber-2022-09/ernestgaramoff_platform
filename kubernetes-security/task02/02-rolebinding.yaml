@@ -4,9 +4,9 @@ metadata:
  name: read-only-pods
 roleRef:
  kind: ClusterRole
- name: role-carol 
+ name: read-only-pods 
  apiGroup: rbac.authorization.k8s.io
 subjects: 
- - kind: ServiceAccount
-   name: carol
-   namespace: prometheus
+ - kind: Group
+   name: system:serviceaccounts:prometheus
+   apiGroup: rbac.authorization.k8s.io
