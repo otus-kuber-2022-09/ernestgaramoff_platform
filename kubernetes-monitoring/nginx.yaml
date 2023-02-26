@@ -117,8 +117,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: my.host.ru
-    http:
+  - http:
       paths:
       - path: /metrics
         pathType: Prefix
