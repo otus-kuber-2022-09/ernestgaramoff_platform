@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+  annotations:
+      prometheus.io/scrape: 'true'
+spec:
+  selector:
+    prometheus: prometheus
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 9090
+
